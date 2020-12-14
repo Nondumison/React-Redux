@@ -1,0 +1,42 @@
+// flow-typed signature: fb7d0ca2637c880161ad282123372a60
+// flow-typed version: <<STUB>>/change-case_v3.1.0/flow_v0.98.0
+
+declare module 'change-case' {
+	declare module.exports: {
+		camel: string => string,
+		camelCase: string => string,
+		constant: string => string,
+		constantCase: string => string,
+		dot: string => string,
+		dotCase: string => string,
+		header: string => string,
+		headerCase: string => string,
+		isLower: string => boolean,
+		isLowerCase: string => boolean,
+		isUpper: string => boolean,
+		isUpperCase: string => boolean,
+		lower: string => string,
+		lowerCase: string => string,
+		lcFirst: string => string,
+		lowerCaseFirst: string => string,
+		no: string => string,
+		noCase: string => string,
+		param: string => string,
+		paramCase: string => string,
+		pascal: string => string,
+		pascalCase: string => string,
+		path: string => string,
+		pathCase: string => string,
+		sentence: string => string,
+		sentenceCase: string => string,
+		snakeCase: string => string,
+		swap: string => string,
+		swapCase: string => string,
+		title: string => string,
+		titleCase: string => string,
+		upper: string => string,
+		upperCase: string => string,
+		ucFirst: string => string,
+		upperCaseFirst: string => string,
+	};
+}

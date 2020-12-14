@@ -1,0 +1,952 @@
+{
+	"info": {
+		"_postman_id": "69ae9939-d7fa-49d1-a7dc-30c355e3f9eb",
+		"name": "Sample API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "find",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"user\",\n\t\t\"attributes\": {\n\t\t\t\"firstName\": \"John\",\n\t\t\t\"lastName\": \"Doe\",\n\t\t\t\"email\": \"john.doe@example.com\",\n\t\t\t\"password\": \"password\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"user\",\n\t\t\"attributes\": {\n\t\t\t\"firstName\": \"Sam\",\n\t\t\t\"lastName\": \"Smith\",\n\t\t\t\"email\": \"sam.smith@example.com\"\n\t\t}\n\t}\n}\n"
+						},
+						"url": {
+							"raw": "{{host}}/users/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"user\",\n\t\t\"attributes\": {\n\t\t\t\"firstName\": \"Kyle\",\n\t\t\t\"lastName\": \"Kell\"\n\t\t}\n\t}\n}\n"
+						},
+						"url": {
+							"raw": "{{host}}/users/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "find",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/roles",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"role\",\n\t\t\"attributes\": {\n\t\t\t\"name\": \"guest\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/roles",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/roles/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"role\",\n\t\t\"attributes\": {\n\t\t\t\"name\": \"employee\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/roles/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"role\",\n\t\t\"attributes\": {\n\t\t\t\"name\": \"manager\"\n\t\t}\n\t}\n}\n"
+						},
+						"url": {
+							"raw": "{{host}}/roles/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/roles/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9177cd40-4e72-4281-a460-4d3cc19697fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "26c4eba2-a086-436d-9ddf-ac6a459d6336",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "foos",
+			"item": [
+				{
+					"name": "find",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find sort",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos?sort=userName,-favColor",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "userName,-favColor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find filter",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos?filter[userName][$iLike]=%john%",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							],
+							"query": [
+								{
+									"key": "filter[userName][$iLike]",
+									"value": "%john%"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find paginate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos?page[limit]=2&page[offset]=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							],
+							"query": [
+								{
+									"key": "page[limit]",
+									"value": "2"
+								},
+								{
+									"key": "page[offset]",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find fields",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos?fields[foo]=userName,favColor",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							],
+							"query": [
+								{
+									"key": "fields[foo]",
+									"value": "userName,favColor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find include",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos?include=bars",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "bars"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"foo\",\n\t\t\"attributes\": {\n\t\t\t\"userName\": \"johnsmith\",\n\t\t\t\"favColor\": \"green\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/foos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"foo\",\n\t\t\"id\": \"1\",\n\t\t\"attributes\": {\n\t\t\t\"userName\": \"janedoe\",\n\t\t\t\"favColor\": \"green\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/foos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"foo\",\n\t\t\"id\": \"1\",\n\t\t\"attributes\": {\n\t\t\t\"userName\": \"johndoe\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/foos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/foos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"foos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9177cd40-4e72-4281-a460-4d3cc19697fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "26c4eba2-a086-436d-9ddf-ac6a459d6336",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "bars",
+			"item": [
+				{
+					"name": "find",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8afa4093-5f39-4118-9b70-51b2550c91ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/bars",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"type\": \"bar\",\n\t\t\"attributes\": {\n\t\t\t\"name\": \"Kate Kluts\",\n\t\t\t\"location\": \"left flank\"\n\t\t},\n\t\t\"relationships\": {\n\t\t\t\"foo\": {\n\t\t\t\t\"data\": {\n\t\t\t\t\t\"type\": \"foo\",\n\t\t\t\t\t\"id\": \"1\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/bars",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/bars/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"id\": \"1\",\n\t\t\"type\": \"bar\",\n\t\t\"attributes\": {\n\t\t\t\"name\": \"Joe Swanson\",\n\t\t\t\"location\": \"east side\"\n\t\t},\n\t\t\"relationships\": {\n\t\t\t\"foo\": {\n\t\t\t\t\"data\": {\n\t\t\t\t\t\"type\": \"foo\",\n\t\t\t\t\t\"id\": \"1\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/bars/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"id\": \"1\",\n\t\t\"type\": \"bar\",\n\t\t\"attributes\": {\n\t\t\t\"location\": \"underground\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}/bars/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/bars/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9177cd40-4e72-4281-a460-4d3cc19697fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "26c4eba2-a086-436d-9ddf-ac6a459d6336",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fbbfdf1c-8c34-41d5-9ef7-ea4f01e1d53a",
+				"type": "text/javascript",
+				"exec": [
+					"const host = pm.environment.get('host');",
+					"const email = pm.environment.get('username');",
+					"const password = pm.environment.get('password');",
+					"const token = pm.environment.get('token');",
+					"",
+					"const claim = token == null || token === '' ?",
+					"\tundefined :",
+					"\tJSON.parse(atob(token.split('.')[1]));",
+					"",
+					"if (claim === undefined || claim.exp < Date.now() / 1000) {",
+					"\tpm.sendRequest({",
+					"\t\turl: `${host}/authentication`,",
+					"\t\tmethod: 'POST',",
+					"\t\theader: 'Content-Type:application/json',",
+					"\t\tbody: {",
+					"\t\t\tmode: 'raw',",
+					"\t\t\traw: JSON.stringify({ email, password, strategy: 'local' }),",
+					"\t\t},",
+					"\t}, (err, res) => {",
+					"\t\tif (err) {",
+					"\t\t\tpm.environment.set('token', undefined);",
+					"\t\t\tconsole.error(new Error(\"Could not authenticate!\"));",
+					"\t\t\tconsole.error(err);",
+					"\t\t\treturn;",
+					"\t\t}",
+					"",
+					"\t\tpm.environment.set('token', res.json().data.token);",
+					"\t});",
+					"}",
+					"",
+					"pm.request.headers.upsert({",
+					"\tkey: 'Content-type',",
+					"\tvalue: 'application/vnd.api+json',",
+					"});",
+					"pm.request.headers.upsert({",
+					"\tkey: 'Accept',",
+					"\tvalue: 'application/vnd.api+json',",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "111c528b-c609-4d4c-99df-862f42051fc1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

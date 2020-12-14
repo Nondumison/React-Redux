@@ -1,0 +1,13 @@
+{
+	"presets": ["react-app"],
+	"plugins": [
+		"react-hot-loader/babel",
+		"lodash",
+		[
+			"module-resolver",
+			{
+				"root": ["./src"]
+			}
+		]
+	]
+}

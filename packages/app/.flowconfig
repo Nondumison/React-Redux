@@ -1,0 +1,27 @@
+[declarations]
+<PROJECT_ROOT>/node_modules/.*
+
+[ignore]
+<PROJECT_ROOT>/src/setupTests.js
+<PROJECT_ROOT>/.*\.test\.js
+<PROJECT_ROOT>/.*\.spec\.js
+<PROJECT_ROOT>/.*/__mocks__/.*
+<PROJECT_ROOT>/.*/__tests__/.*
+
+[options]
+emoji=true
+module.name_mapper='^@material-ui/icons/.+$' -> 'type-utils/icons'
+module.system.node.resolve_dirname=./src
+module.system.node.resolve_dirname=node_modules
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe .+
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore .+
+# https://github.com/facebook/flow/issues/2221
+suppress_type=$DownCast
+
+[strict]
+sketchy-null
+nonstrict-import
+unclear-type
+unsafe-getters-setters
+untyped-import
+untyped-type-import

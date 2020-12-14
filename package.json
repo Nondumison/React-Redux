@@ -1,0 +1,38 @@
+{
+	"name": "sample-app",
+	"description": "Sample app",
+	"author": "Xandor Schiefer <xandor@eldoenergy.com>",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"format": "prettier --write \"./packages/*/src/**/*.{js,json}\"",
+		"flow:api": "cd packages/api && yarn flow",
+		"flow:app": "cd packages/app && yarn flow",
+		"flow": "npm-run-all -c flow:*",
+		"lint:api": "cd packages/api && yarn lint",
+		"lint:app": "cd packages/app && yarn lint",
+		"lint": "npm-run-all -c lint:*",
+		"test:api": "cd packages/api && cross-env CI=true yarn test:nowatch --all --coverage --color",
+		"test:app": "cd packages/app && cross-env CI=true yarn test --all --coverage --color",
+		"test": "npm-run-all -c test:*",
+		"release:api": "cd packages/api && yarn release",
+		"release:app": "cd packages/app && yarn release",
+		"release": "npm-run-all release:*",
+		"precommit:api": "cd packages/api && yarn precommit",
+		"precommit:app": "cd packages/app && yarn precommit"
+	},
+	"devDependencies": {
+		"cross-env": "^5.2.0",
+		"@commitlint/cli": "^8.1.0",
+		"@commitlint/config-conventional": "^8.1.0",
+		"commitizen": "^3.0.5",
+		"cz-conventional-changelog": "^2.1.0",
+		"git-cz": "^3.0.1",
+		"husky": "^3.0.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^1.7.0",
+		"pretty-quick": "^1.10.0"
+	}
+}

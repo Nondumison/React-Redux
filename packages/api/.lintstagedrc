@@ -1,0 +1,7 @@
+{
+	"src/**/*.js": [
+		"cross-env NODE_ENV=development eslint",
+		"cross-env CI=true node jest-config/jest.js --env=node --findRelatedTests",
+		"git add"
+	]
+}

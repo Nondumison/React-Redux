@@ -1,0 +1,17 @@
+{
+	"concurrentFiles": 4,
+	"threshold": 90,
+	"strictCoverage": true,
+	"globIncludePatterns": ["**/*.js"],
+	"globExcludePatterns": [
+		"jest.config.js",
+		"node_modules/**",
+		"flow-typed/**",
+		"src/setupTests.js",
+		"src/**/*.stories.js",
+		"**/__mocks__/**",
+		"**/__tests__/**",
+		"**/*.test.js",
+		"**/*.spec.js"
+	]
+}

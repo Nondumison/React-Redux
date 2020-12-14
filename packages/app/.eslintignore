@@ -1,0 +1,4 @@
+/build
+/flow-typed/**/*_v[1-9].x.x.js
+/flow-typed/**/*_v[1-9][1-9].x.x.js
+/flow-typed/**/*_v[1-9][1-9][1-9].x.x.js

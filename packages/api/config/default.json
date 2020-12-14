@@ -1,0 +1,44 @@
+{
+	"host": "localhost",
+	"port": 3030,
+	"assets": "../assets/",
+	"uploads": "../uploads/",
+	"paginate": {
+		"default": 10,
+		"max": 50
+	},
+	"ui": {
+		"host": "localhost",
+		"port": ":3000",
+		"protocol": "http"
+	},
+	"gmail": {
+		"user": "noreply@eldoenergy.com",
+		"pass": "eldoenergynoreplymessages"
+	},
+	"contact": {
+		"primary": "emirgluhbegovic@gmail.com"
+	},
+	"postgres": "postgres://sample:sample123@localhost:5432/sample",
+	"authentication": {
+		"secret": "c1013350e684995081163618ecc458fbe0c0c310565f89959dd759d54b09aac8d35e3b15e6f1815e9a14f8db71501192423d21d8ea47f5717bf7db7ede87e5617e0c9fb112cc662899efb121449fdf99ec4cf69ffc3ee1dd35d6f9940121981cdefb1e3c9b5675a060e9bbd1d4552d93cc38a7ffc7bbc9ab1c3313b814b83d66e112b3a3e633a75dd3a5881a9c38bea9bbf198991c02a87ec64be25c7d0df879e2db57d16b1ebc171a65cd458aa595d83112cd45be90630db90484a0e55ff1228bf9b03a0b83ecfc84b02124c3adf7857cb5568b27f88a5be3e5726b27a8646c80e836c8f89bee61ea1bbbfc3f18f2feca52c7f46b5fa3b93553195c1b3e9edf",
+		"strategies": ["jwt", "local"],
+		"path": "/authentication",
+		"service": "users",
+		"jwt": {
+			"header": {
+				"typ": "access"
+			},
+			"audience": "https://yourdomain.com",
+			"subject": "anonymous",
+			"issuer": "feathers",
+			"algorithm": "HS256",
+			"expiresIn": "1d"
+		},
+		"local": {
+			"entity": "user",
+			"usernameField": "email",
+			"passwordField": "password"
+		}
+	}
+}
